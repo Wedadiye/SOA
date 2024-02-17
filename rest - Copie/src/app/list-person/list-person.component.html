@@ -1,0 +1,22 @@
+<h2> Persons List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Nni</th>
+            <th>  Nom </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let person of persons" >
+            <td> {{ person.nni }} </td>
+            <td> {{ person.nom }} </td>
+        <td>
+
+                <button (click) = "updatePerson(person.nni)" class = "btn btn-info"> Update</button>
+                <button (click) = "deletePerson(person.nni)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "personDetails(person.nni)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+
+<div class="col-md-6 offset-md-3"> <!--centrer le form-->
+    <h3> Create Person </h3>
+  
+  <form #personForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group mb-3">
+          <label for="nni">NNI :</label>
+        <input type="number" class ="form-control"  id="nni" name="nni" [(ngModel)]="nouveauPerson.nni" required>
+      </div>
+      <div class="form-group mb-3">
+          <label for="nom">NOM :</label>
+        <input type="text" class ="form-control"  id="nom" name="nom" [(ngModel)]="nouveauPerson.nom" required>
+      </div>
+      
+      <!-- Ajoute d'autres champs selon les propriétés de la classe Produit -->
+      <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Créer Person</button>
+    </div>
+  </form>  
+  </div>
+  
